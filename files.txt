@@ -1,0 +1,11 @@
+--secondary--color: #fa6e06;
+--main-background-color: #212429;
+--menu-background--color: #292a2e;
+
+--creditCard-gradient1--color: #fa6b03;
+--creditCard-gradient2--color: #d58443;
+--creditCard-gradient3--color: #8d4718
+--text-color--color: #f1f1f2;
+--text-color-2: #313236;
+
+font-family: 'Mochiy Pop P One', sans-serif;

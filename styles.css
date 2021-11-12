@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Montserrat&display=swap');
+
+:root {
+--main-background-color: #212429;
+--text-color: #f1f1f2;
+--text-color-2: #313236;
+--text-color-3:rgba(255,255,255,0.7);
+--secondary--color: #fa6e06;
+--circle1--color: #df0d04;
+--circle2--color: #f3bf0d;
+--creditCard-gradient2--color: #d58443;
+--creditCard-gradient3--color: #8d4718;
+
+
+
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+background-color: var(--main-background-color);
+min-height: 100vh;
+width: 100%;
+color: var(--text-color);
+font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+
+/* styling the menu starts here ----------------------------- */
+
+.menu {
+    position: fixed;
+    /* border: 2px solid; */
+    background: var(--menu-background-color);
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    /* overflow: hidden; */
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.menu .unordered--list {
+    width: 100%;
+    padding: 60px 0 50px 20px;
+    list-style-type: none;
+    /* background: red; */
+    line-height: 2.8;
+
+}
+
+.menu .unordered--list .list {
+    position: relative;
+    display: block;
+    width: 80%;
+    /* line-height: 3; */
+    text-align: center;
+    /* border: 2px solid; */
+    /* border-radius: 25px; */
+    padding-left: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    /* overflow: hidden */
+    /* border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px; */
+}
+.menu .unordered--list .list:nth-child(1) a {
+    background-color: var(--secondary--color);
+}
+/* 
+.unordered--list .list:hover,
+.unordered--list .list:focus {
+    background: var(--secondary--color);
+} */
+.menu .unordered--list .list a {
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    padding-left: 10px;
+    /* font-weight: normal; */
+    /* gap: 30px; */
+    /* border: 2px solid green; */
+    transition: background 200ms linear;
+    border-radius: 20px;
+    
+}
+.list a:active,.list a:hover,.list a:focus {
+    background: var(--secondary--color);
+}
+.list a .icon {
+    /* width: 100%; */
+    font-family: fontAwesome;
+    font-weight: 800;
+    /* margin-left: 10px; */
+}
+
+.list a .icon .fas, .far {
+    color: var(--text-color);
+    font-weight: 800;
+    font-size: 20px;
+    
+}
+
+.list a .title{
+    margin-left: 20px;
+    font-size: 18px;
+    white-space: nowrap;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: var(--text-color-3);
+    /* width: 100%; */
+
+}
+
+/* .list:nth-child(8) .title {
+    padding-right: 10px; i get it wow
+} */
+/* main starts here------------------------------------------------ */
+.main {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 300px);
+    left: 300px;
+    /* border: 3px solid; */
+    padding-left: 20px;
+}
+/* The top bar starts here -------------------------------------------- */
+
+.main .top--header {
+    height: 80px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+
+
+}
+.top--header .profile--image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* border: 1px solid green; */
+
+}
+
+.top--header .profile--image .profile {
+    display: block;
+    height: 60px;
+    width: 60px;
+    /* border: 1px solid; */
+    overflow: hidden;
+    border-radius: 120px;
+    outline: none;
+}
+
+.top--header .profile > img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center right;
+}
+
+.top--header .profile--image span {
+    color: var(--text-color);
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: 'Mochiy Pop P One', sans-serif; 
+    /* font-stretch: ; */
+}
+
+.top--header .right--float {
+    /* border: 1px solid; */
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    padding: 10px 0;
+}
+
+.right--float a:nth-child(2) {
+    /* color: green; */
+    float: right;
+    padding-right: 10px;
+}
+
+.right--float a:nth-child(1) {
+    /* color: green; */
+    float: left}
+.right--float a .fas {
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+
+.right--float .notify--alert {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color:var(--secondary--color);
+    border-radius: 50px;
+    right: 8px;
+    top: 8px;
+}
+
+/* the top bar styling ends here ----------------------------------- */
+
+/* Section of overview starts here  which is section2 --------------------*/
+
+.first--overview--dashboard {
+    /* border: 3px solid; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    /* height: 100%; */
+    padding: 40px 10px;
+    /* overflow: hidden; */
+    column-gap: 1em;
+}
+
+.first--card {
+    /* border: 3px solid; */
+    display: block;
+    width: 400px;
+    height: 300px;
+    padding-left:  10px;
+    padding-right: 10px;
+    box-shadow: -3px 5px 15px 0px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    padding-top: 0px;
+    display: grid;
+    place-items: center center;
+    /* padding-bottom: 50px; */
+}
+.title--icon {
+    /* border: 3px solid; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.title--icon span:nth-child(1) {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 500;
+}
+.title--icon span:nth-child(2) {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+.credit--card {
+    margin: 10px 0 ;
+    display:block;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    /* border: 3px solid red; */
+    background-image: linear-gradient(to right bottom, var(--secondary--color),var(--creditCard-gradient2--color)60%,var(--creditCard-gradient3--color));
+    border-radius: 20px;
+    height: 210px;
+    width: 90%;
+    padding: 10px  15px ;
+}
+
+.credit--card .balance--cash {
+    display: grid;
+    place-items: center start;
+    gap: 3px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.balance--cash .balance {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.balance--cash .cash--amount {
+    font-family: "Montserrat",sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.card--number {
+    margin-top: 10px;
+
+    /* border: 2px solid ; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 10px;
+    font-family: 'Mochiy Pop P One', sans-serif; 
+
+}
+
+.card--number .no--1, .no--2, .no--3 {
+    font-family: fontAwesome;
+    font-size: 15px;
+}
+
+.card--number .no--4 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    
+}
+.expire--trademark {
+    /* border: 2px solid; */
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.expire--trademark .expire {
+    display: block;
+    /* border: 3px solid; */
+    padding: 5px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    /* font-style: ; */
+    /* border: 1px solid; */
+}
+
+.expire--trademark .expire p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding-bottom: 3px;
+    
+}
+.expire--trademark .expire span {
+    font-size: 14px;
+    /* margin-top: 25px; */
+}
+
+.trademark {
+    position: relative;
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.trademark .circle {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    background-color: var(--circle1--color);
+}
+
+.trademark .circle--1 {
+    /* backdrop-filter: contrast(20%); */
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.trademark .circle--2 {
+    transform: translateX(25px);
+    z-index: 0;
+    background-color: var(--circle2--color);
+    /* opacity: 0.6; */
+
+}
+
+/* this is the second card styling section --------- */
+.second--card {
+    width: 380px;
+    height: 320px;
+    /* border: 3px solid; */
+    padding: 10px;
+    display:grid;
+    box-shadow: -3px 5px 15px 0px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    padding-top: 0px;
+    /* row-gap: 10px; */
+
+}
+
+.customer--transactions {
+    /* border: 1px solid yellow; */
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.customer--image {
+    /* border: 1px solid green; */
+    width: 60px;
+    height: 60px;
+    border-radius: 140px;
+    overflow: hidden;
+}
+
+.image--title {
+    display: flex;
+    align-items: center;
+    justify-content:baseline;
+    gap: 10px;
+}
+
+.name--date {
+    /* border: 2px solid black; */
+    width: 150px;
+    display: block;
+    line-height: 1.5;
+}
+.name--date .customer--name {
+    font-size: 15px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: var(--text-color);
+}
+
+.name--date span:nth-child(2) {
+    color:var(--text-color-3);
+    font-size: 14px;
+
+}
+
+
+
+.customer--image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.customer--transactions .customer--deposit {
+    color: var(--circle1--color);
+}
+ /* second card styling ends here---------------------------- */
+
+/* Section of overview ends here-------------------------------- */
