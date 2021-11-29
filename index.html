@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+        <script src="app.js" defer></script>
         <link rel="stylesheet" href="styles.css">
         <script src="https://kit.fontawesome.com/89c9988113.js" crossorigin="anonymous"></script>
         <title>Fin-Dashboard</title>
@@ -119,7 +121,7 @@
                 </div>
             </div>
             <!--the top-header layout ends here -->
-            <section class="first--overview--dashboard">
+            <section class="section--1 first--overview--dashboard">
                 <!-- the first card layout beggining -->
                 <div class="first--card">
                     <div class="title--icon">
@@ -177,96 +179,200 @@
                     <div class="customer--transactions">
                         <div class="image--title">
                             <div class="customer--image">
-                                <img src="images/pro-pic.jpg" alt="">
+                                <img src="images/img1.jpg" alt="">
                             </div>
                             <div class="name--date">
-                                <span class="customer--name">james owolabi</span>
+                                <span class="customer--name">Anita jonny</span>
                                 <span>21/09/2021</span>
                             </div>
                         </div>
                         <div class="customer--deposit">
-                            <span>N 22,000</span>
+                            <span>N 100,000</span>
 
                         </div>
                     </div>
                     <div class="customer--transactions">
                         <div class="image--title">
                             <div class="customer--image">
-                                <img src="images/pro-pic.jpg" alt="">
+                                <img src="images/img2.jpeg" alt="">
                             </div>
                             <div class="name--date">
-                                <span class="customer--name">james owolabi</span>
+                                <span class="customer--name">idowu badmus</span>
                                 <span>12/10/2021</span>
                             </div>
                         </div>
                         <div class="customer--deposit">
-                            <span>N 22,000</span>
+                            <span>N 50,000</span>
                         </div>
                     </div>
                     <div class="customer--transactions">
                         <div class="image--title">
                             <div class="customer--image">
-                                <img src="images/pro-pic.jpg" alt="">
+                                <img src="images/img3.jpg" alt="">
                             </div>
                             <div class="name--date">
-                                <span class="customer--name">james owolabi</span>
+                                <span class="customer--name">jason oluseyi</span>
                                 <span>21/12/2021</span>
                             </div>
 
 
                         </div>
                         <div class="customer--deposit">
-                            <span>N 22,000</span>
+                            <span>N 35,000</span>
                         </div>
                     </div>
 
                 </div>
                 <!-- the second card layout ends here -->
-                <div class="second--card">
-                    <div class="title--icon">
-                        <span>All transactions</span>
+                <div class="third--card">
+                    <div class="title">
+                        <span>report</span>
+                    </div>
+                    <!-- the line chart begins here -->
+
+                    <div class="line--chart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <!-- the line chart ends here -->
+                </div>
+            </section>
+            <!-- Ends of main section-------------- -->
+
+            <!-- section 2 starts with a table on the first card -->
+            <section class="section--2">
+                <div class="section--2--first--card">
+
+                    <div class="section--2--title--icon">
+                        <span>budget</span>
                         <span><i class="fas fa-plus"></i></span>
                     </div>
-                    <div class="customer--transactions">
-                        <div class="image--title">
-                            <div class="customer--image">
-                                <img src="images/pro-pic.jpg" alt="">
-                            </div>
-                            <span class="customer--name">james owolabi</span>
+                    <div class="budget--heading">
+                        <div class="cash">
+                            <span>cash</span>
                         </div>
-                        <div class="customer--deposit">
-                            <span>N 22,000</span>
+                        <div class="amount--cash">
+                            <span>N 200,000</span>
                         </div>
                     </div>
-                    <div class="customer--transactions">
-                        <div class="image--title">
-                            <div class="customer--image">
-                                <img src="images/pro-pic.jpg" alt="">
+
+                    <div class="subscriptions--container">
+                        <div class="all--sub first--sub">
+                            <div class="sub--icon">
+                                <div class="icon">
+                                    <i class="far fa-check-square"></i>
+                                </div>
+                                <div class="sub">
+                                    <h4>subscriptions</h4>
+                                    <p>automated</p>
+                                </div>
                             </div>
-                            <span class="customer--name">james owolabi</span>
-                        </div>
-                        <div class="customer--deposit">
-                            <span>N 22,000</span>
-                        </div>
-                    </div>
-                    <div class="customer--transactions">
-                        <div class="image--title">
-                            <div class="customer--image">
-                                <img src="images/pro-pic.jpg" alt="">
+                            <div class="sub--amount">
+                                <span> N44,000</span>
                             </div>
-                            <span class="customer--name">james owolabi</span>
                         </div>
-                        <div class="customer--deposit">
-                            <span>N 22,000</span>
+                        <div class="all--sub second--sub">
+                            <div class="sub--icon">
+                                <div class="icon">
+                                    <i class="far fa-check-square"></i>
+                                </div>
+                                <div class="sub">
+                                    <h4>loan payment</h4>
+                                    <p>automated</p>
+                                </div>
+                            </div>
+                            <div class="sub--amount">
+                                <span> N24,000</span>
+                            </div>
+                        </div>
+                        <div class="all--sub third--sub">
+                            <div class="sub--icon">
+                                <div class="icon">
+                                    <i class="far fa-square"></i>
+                                </div>
+                                <div class="sub">
+                                    <h4>savings</h4>
+                                    <!-- <p>automated</p> -->
+                                </div>
+                            </div>
+                            <div class="sub--amount">
+                                <span> N39,000</span>
+                            </div>
+                        </div>
+                        <div class="all--sub fouth--sub">
+                            <div class="sub--icon">
+                                <div class="icon">
+                                    <i class="far fa-check-square"></i>
+                                </div>
+                                <div class="sub">
+                                    <h4>foodstuff</h4>
+                                    <!-- <p>automated</p> -->
+                                </div>
+                            </div>
+                            <div class="sub--amount">
+                                <span> N5,000</span>
+                            </div>
+                        </div>
+                        <div class="all--sub fifth--sub">
+                            <div class="sub--icon">
+                                <div class="icon">
+                                    <i class="far fa-square"></i>
+                                </div>
+                                <div class="sub">
+                                    <h4>fuel</h4>
+                                    <!-- <p>automated</p> -->
+                                </div>
+                            </div>
+                            <div class="sub--amount">
+                                <span> N14,000</span>
+                            </div>
                         </div>
                     </div>
 
                 </div>
+                <!-- this is a block to divide the connect for easy placement os sub-container -->
+                <section class="second--card--blocks">
+
+                    <div class="first--cardsecond--blocks">
+                        <div class="title--icon">
+                            <span>subscriptions</span>
+                            <span><i class="fas fa-plus"></i></span>
+                        </div>
+
+                        <div data-title-secondblock="1">
+                            <div data-title-date="">
+                                <p>linkedin</p>
+                                <span>Due 21/12/21</span>
+                            </div>
+                            <div data-title-amount="">
+                                <span>N 48,000</span>
+                            </div>
+                        </div>
+                        <div data-title-secondblock="1">
+                            <div data-title-date="">
+                                <p>netflix</p>
+                                <span>Due 21/12/21</span>
+                            </div>
+                            <div data-title-amount="">
+                                <span>N 48,000</span>
+                            </div>
+                        </div>
+                        <div data-title-secondblock="1">
+                            <div data-title-date="">
+                                <p>dstv</p>
+                                <span>Due 21/12/21</span>
+                            </div>
+                            <div data-title-amount="">
+                                <span>N 48,000</span>
+                            </div>
+                        </div>
 
 
+                    </div>
 
+                </section>
+                <!-- Second card block ends here -->
             </section>
-            <!-- Ends of main section-------------- -->
+            <!-- section--2 ends here -->
         </section>
 
 

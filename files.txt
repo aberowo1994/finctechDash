@@ -9,3 +9,4 @@
 --text-color-2: #313236;
 
 font-family: 'Mochiy Pop P One', sans-serif;
+font-family: 'Montserrat', sans-serif;

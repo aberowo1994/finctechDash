@@ -10,6 +10,8 @@
 --circle2--color: #f3bf0d;
 --creditCard-gradient2--color: #d58443;
 --creditCard-gradient3--color: #8d4718;
+ --green-color:#57C441;
+
 
 
 
@@ -228,14 +230,14 @@ font-family: 'Mochiy Pop P One', sans-serif;
     grid-template-columns: repeat(3, 1fr);
     max-width: 100%;
     /* height: 100%; */
-    padding: 40px 10px;
+    padding: 40px 0px;
     /* overflow: hidden; */
     column-gap: 1em;
 }
 
 .first--card {
     /* border: 3px solid; */
-    display: block;
+    /* display: block; */
     width: 400px;
     height: 300px;
     padding-left:  10px;
@@ -245,6 +247,8 @@ font-family: 'Mochiy Pop P One', sans-serif;
     padding-top: 0px;
     display: grid;
     place-items: center center;
+    /* grid-auto-rows: 100px; */
+    /* overflow: hidden; */
     /* padding-bottom: 50px; */
 }
 .title--icon {
@@ -445,6 +449,10 @@ font-family: 'Mochiy Pop P One', sans-serif;
 
 }
 
+.customer--transactions:nth-of-type(4) .customer--deposit  {
+    color: var(--green-color);
+}
+
 
 
 .customer--image > img {
@@ -458,4 +466,220 @@ font-family: 'Mochiy Pop P One', sans-serif;
 }
  /* second card styling ends here---------------------------- */
 
+ /* Third card styling starts here---------------- */
+ .third--card {
+    width: 380px;
+    height: 320px;
+    /* border: 3px solid; */
+    /* padding: 10px; */
+    display:grid;
+    box-shadow: -3px 5px 15px 0px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    padding: 20px 20px 0px 20px ;
+    text-transform: capitalize;
+    /* row-gap: 10px; */
+
+}
+.third--card .title {
+    /* border: 2px solid; */
+    padding: 10px 0px  0px 20px;
+
+}
+.line--chart {
+    /* border: 1px solid; */
+    width: 100%;
+    height: auto;
+}
+ /* Third card styling ends here---------------- */
+
 /* Section of overview ends here-------------------------------- */
+
+/* styling of section--2 and tables starts here */
+
+.section--2 {
+    width: 100%;
+    /* height: 100%; */
+    /* border: 2px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 20px;
+    padding-left:20px;
+    padding-bottom: 20px;
+
+}
+.section--2--first--card {
+    display: grid;
+    align-items: center;
+    justify-content: baseline;
+    /* border: 3px solid magenta; */
+    width: 380px;
+    height: 520px;
+    box-shadow: -3px 5px 15px 0px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    padding-top: 20px;
+    padding-bottom: 200px;
+    /* padding-left:  20px;
+    padding-right: 20px; */
+    line-height: 1.5;
+ 
+}
+
+.section--2--first--card .section--2--title--icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    /* border: 2px solid; */
+}
+
+.section--2--title--icon span:nth-child(1) {
+    font-size: 20px;
+    padding-left: 20px;
+}
+.section--2--title--icon span:nth-child(2) {
+    font-size: 20px;
+    padding-right: 20px;
+}
+.budget--heading {
+    width: 100%;
+    display: flex;
+    border-bottom: 4px solid var(--secondary--color);
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    padding: 10px 0px;
+    /* border: 2px solid; */
+    margin-top: 15px;
+
+
+}
+.budget--heading .cash span {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.budget--heading .amount--cash {
+    font-size: 20px;
+    padding-right: 20px;
+
+}
+
+.subscriptions--container {
+    /* border: 3px solid; */
+    width: 100%;
+    margin-top: 20px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 5px;
+    border: 3px solid red; */
+    text-transform: capitalize;
+}
+
+.subscriptions--container .all--sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0px;
+
+}
+
+.all--sub .sub--icon {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 20px;
+}
+
+.all--sub .sub--icon .far {
+    font-size: 25px;
+    padding-left: 30px;
+    color: var(--secondary--color);
+}
+.sub--icon .sub {
+    display: block;
+}
+
+.sub--icon .sub h4 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;;
+}
+.sub--icon .sub p {
+    font-size: 14px;
+    /* font-weight: 500; */
+    color: var(--text-color-3);
+    font-family: 'Montserrat', sans-serif;;
+
+}
+.all--sub .sub--amount span {
+    padding-right: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+/* second--card--blocks starts here */
+.second--card--blocks {
+    width: 60%;
+    /* border: 2px solid cyan; */
+}
+/* styling of secondcard blocks start here */
+.first--cardsecond--blocks {
+  
+    width: 380px;
+    height: 320px;
+    /* border: 3px solid; */
+    padding: 10px;
+    display:grid;
+    box-shadow: -3px 5px 15px 0px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    padding-top: 0px;
+    /* row-gap: 10px; */
+
+
+}
+
+.first--cardsecond--blocks [data-title-secondblock="1"] {
+    /* border: 2px solid; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+[data-title-date=""] {
+    display: block;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+
+}
+[data-title-date=""] span{
+    color: var(--circle1--color);
+    font-size: 14px;
+
+}
+[data-title-date=""] p {
+    padding-bottom: 5px;
+    /* border: 3px solid; */
+}
+[ data-title-amount=""] {
+    color: var(--text-color);
+    padding-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+[data-title-secondblock="1"]:nth-child(4) p {
+    text-transform: uppercase;
+}
+/* styling of secondcard blocks ends here */
+
+/* styling of section--2 and tables ends here */
