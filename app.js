@@ -1,5 +1,18 @@
 "use strict"
 
+let mainMenu = document.querySelector('.menu');
+const mainOverview = document.querySelector('.main');
+
+mainMenu.addEventListener('mouseover',menuToggle);
+mainMenu.addEventListener('mouseout',menuToggle);
+
+function menuToggle() {
+    mainMenu.classList.toggle('active');
+    mainOverview.classList.toggle('active');
+
+}
+
+
 let myLineChart = document.getElementById('myChart');
 // const labels = Utils.months({count: 5});
 const labels = [
@@ -52,3 +65,21 @@ let theChart = new Chart(myLineChart,{
 });
 
 console.log('hello');
+
+/**
+ * the progress bar javascript integration ************************
+ */
+
+let progressNumber = document.getElementById('counting--num');
+
+let reader = 0;
+setInterval(function(){
+    if (reader === 50) {
+        clearInterval();
+    } else {
+        reader = reader + 1;
+        progressNumber.textContent = `${reader}%`
+    }
+    // reader++;
+    // progressNumber.textContent = reader + '%'
+}, 35)
